@@ -307,18 +307,33 @@
     id="HI"
     name="Hawaii"   class="US"></path>
   
+  <text fill="black" x="100" y= "450"> Quick Summary of the Numbers: </text>
   {% for year in years %}
-  <text fill="black" x="100" y="{{400 + loop.index0 * 50}}">{{year[0]}}: {{year[1]}}</text>
+  <text fill="black" x="100" y="{{490 + loop.index0 * 50}}">{{year[0]}} had {{year[1]}} this year.</text>
+
   {% endfor %}
 
-  <rect x="100" y="200" width="20" height="20" fill="hsl(44, 0%, 90%)"/>
-  <text x="80" y="215" fill="hsl(44, 0%, 10%)">50</text>
-  <rect x="100" y="220" width="20" height="20" fill="hsl(44, 0%, 70%)"/>
-  <text x="80" y="235" fill="hsl(44, 0%, 30%)">60</text>
-  <rect x="100" y="240" width="20" height="20" fill="hsl(44, 0%, 50%)"/>
-  <text x="80" y="255" fill="hsl(44, 0%, 50%)">60</text>
-  <rect x="100" y="260" width="20" height="20" fill="hsl(44, 0%, 30%)"/>
-  <text x="80" y="275" fill="hsl(44, 0%, 50%)">70</text>
-  <rect x="100" y="280" width="20" height="20" fill="hsl(44, 0%, 10%)"/>
-  <text x="80" y="295" fill="hsl(44, 0%, 50%)">80</text>
+  <rect x="80" y="200" width="20" height="20" fill="hsl(44, 0%, 90%)"/>
+  <text x="60" y="215" fill="hsl(44, 0%, 10%)">50</text>
+  <rect x="80" y="220" width="20" height="20" fill="hsl(44, 0%, 82%)"/>
+  <text x="60" y="235" fill="hsl(44, 0%, 10%)">53</text>
+  <rect x="80" y="240" width="20" height="20" fill="hsl(44, 0%, 74%)"/>
+  <text x="60" y="255" fill="hsl(44, 0%, 30%)">56</text>
+  <rect x="80" y="260" width="20" height="20" fill="hsl(44, 0%, 66%)"/>
+  <text x="60" y="275" fill="hsl(44, 0%, 50%)">59</text>
+  <rect x="80" y="280" width="20" height="20" fill="hsl(44, 0%, 58%)"/>
+  <text x="60" y="295" fill="hsl(44, 0%, 50%)">62</text>
+  <rect x="80" y="300" width="20" height="20" fill="hsl(44, 0%, 50%)"/>
+  <text x="60" y="315" fill="hsl(44, 0%, 50%)">65</text>
+  <rect x="80" y="320" width="20" height="20" fill="hsl(44, 0%, 42%)"/>
+  <text x="60" y="335" fill="hsl(44, 0%, 10%)">68</text>
+
+  <rect x="80" y="340" width="20" height="20" fill="hsl(44, 0%, 34%)"/>
+  <text x="60" y="355" fill="hsl(44, 0%, 10%)">71</text>
+  <rect x="80" y="360" width="20" height="20" fill="hsl(44, 0%, 26%)"/>
+  <text x="60" y="375" fill="hsl(44, 0%, 10%)">74</text>
+  <rect x="80" y="380" width="20" height="20" fill="hsl(44, 0%, 18%)"/>
+  <text x="60" y="395" fill="hsl(44, 0%, 10%)">77</text>
+  <rect x="80" y="400" width="20" height="20" fill="hsl(44, 0%, 10%)"/>
+  <text x="60" y="415" fill="hsl(44, 0%, 10%)">80</text>
   </svg>

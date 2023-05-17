@@ -8,7 +8,7 @@ svg{
 }
 
 .us {
-  stroke:blue;
+  stroke:red;
 }
 
 .us:hover {
@@ -17,7 +17,7 @@ svg{
 }
 
 .canada {
-  stroke:red;
+  stroke:blue;
 }
 
 .canada:hover {
@@ -26,7 +26,7 @@ svg{
 }
 
 .mexico {
-  stroke:green;
+  stroke:orange;
 }
 
 .mexico:hover {

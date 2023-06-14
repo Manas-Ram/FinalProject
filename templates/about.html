@@ -1,0 +1,52 @@
+
+<html>
+  <head>
+    <title>Bodegas to Supermarket Ratio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar" style="background-color: #e3f2fd;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="/index">Map</a>
+            <a class="nav-link" href="/micro">Micro</a>
+            <a class="nav-link" href="/">About</a>
+            <a class="nav-link" href="/bedstuy">BedStuy</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <h1 class="first">About Page</h1>
+  
+
+  
+    <div>
+      <h2 class="second">Bodegas to Supermarket Ratio By Neighborhood in New York City
+      <p>In order to find something that provides insight on our communities, I wanted to do something about food. A big issue surrounding communities in New York is the access to fresh produce for good diets; many communities don't have that many supermarkets, so they rely on bodegas and delis for food.  </p>
+      <p>Some feedback I got for this project is that I have to make sure I include both delis and bodegas, as they provide the same resources as each other. Some takeaways I had from the feedback is that I should definitely organize my data using a map of New York City, and make sure I am displaying useful information, as well as making it organized. </p>
+    </div>
+    <img src = "IMG_2485.png" alt = "Macro" style = "height:500px; width:500px">
+    <img src = "IMG_2486.png" alt = "Micro" style = "height:500px; width:500px">
+
+    <div>
+      <p>Here is my data pipeline:</p>
+      <ul>
+        <li>The data set used for this project was downloaded from the Department of Environment & Health's website: https://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=2389,719b87,127,Disparities,Ratio%20of%20Bodegas%20to%20Supermarkets,years=2016,dataLink=Neighborhood%20Poverty </li>
+        <li>Google Sheets was used to eliminate columns that were not needed for this project, so it strictly focuses on the bodega and supermarket ratio</li>
+        <li>I formatted the data into a dictionary so I can see the storage by year and by county </li>
+        <li>I used a similar python program to the file from LifeExpectancy to read the data and turn it into a .json file </li>
+        <li>The final step was to interpret the data and display it</li>
+
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+  </html>

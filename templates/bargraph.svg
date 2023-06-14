@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
+    <line style="stroke:black; stroke-width:3" class="ax" x1="40" y1="450" x2="1500" y2="450" />
+    <line style="stroke:black; stroke-width:3" class="ax" x1="40" y1="450" x2="40" y2="10" />
+
+    {% for c in range(15, 450, 40) %}
+    <line style="stroke:black; stroke-width:3" class="tick" x1="30" y1="{{(450 - c) + 5}}" x2="50" y2="{{(450 - c) + 5}}"></line>
+    <text style="font-size:10" x="15" y="{{(450 - c) + 10}}" text-anchor="middle">{{(c-10) // 40 * 5}}</text>
+    {% endfor %}
+
+    {% for district in data["New York"] %}
+    {% set c = loop.index0 * 20 + 55 %}
+    {% set barHeight = data['New York'][district] * 7 %}
+    <rect style="fill: indigo" x="{{ c }}" y="{{ 450 - barHeight }}" width="10" height="{{ barHeight }}" />
+    
+    {% set abbreviation = district[0] + district[1] + district[2] %}
+    {% set abbreviation = abbreviation.upper() %}
+    <text style="font-size: 8" x="{{ c + 5 }}" y="475">{{ abbreviation }}</text>
+    <rect style="fill:gold" x="1620" y= "112" width ="10" height="16"/>
+{% endfor %}
+
+    
+
+
+</svg>

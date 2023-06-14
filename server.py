@@ -5,48 +5,47 @@ from flask import render_template
 import json
 
 app = Flask(__name__, static_url_path="", static_folder="static")
-@app.route("/")
+@app.route('/index')
 def index():
-    f = open("data/life_expectancy.json", "r")
+
+
+    f = open("templates/borough.json", "r")
     data = json.load(f)
     f.close()
-    lecan = []
-    for x in data["Canada"].values():
-        lecan.append(x)
-    leus = []
-    for x in data["United States"].values():
-        leus.append(x)
-    lemex = []
-    for x in data["Mexico"].values():
-        lemex.append(x)
-    CanadaLine = []
-    for i in range(len(lecan) - 1):
-        CanadaLine.append([lecan[i], lecan[i + 1]])
-    UsLine = []
-    for i in range(len(leus) - 1):
-        UsLine.append([leus[i], leus[i + 1]])
-    MexLine = []
-    for i in range(len(lemex) - 1):
-        MexLine.append([lemex[i], lemex[i + 1]])
-    ages = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-    years = [1960, 1970, 1980, 1990, 2000, 2010, 2020]
-    return render_template("index.html", years=data["Canada"].keys(),Canada=CanadaLine,Us=UsLine,Mex=MexLine,ages=ages,years2=years,
-    )
 
-@app.route("/year")
-def year():
-    f = open("data/life_expectancy.json", "r")
+    return render_template('index.html', data = data)
+@app.route('/')
+def about():
+
+    return render_template('about.html')
+@app.route('/micro')
+def micro():
+
+
+    f = open("templates/borough.json", "r")
     data = json.load(f)
     f.close()
-    year = request.args.get("year")
-    Mex = 90 - ((data["Mexico"][year]) - 50) * 2
-    Canada = 90 - ((data["Canada"][year]) - 50) * 2
-    Us = 90 - ((data["United States"][year]) - 50) * 2
-    years = [["Mexico", data["Mexico"][year]],["Canada", data["Canada"][year]],["United States", data["United States"][year]],
-    ]
-    return render_template(
-        "year.html", year=year, Mex=Mex, Us=Us, Canada=Canada, years=years
-    )
 
+    return render_template('micro.html', data = data)
+@app.route('/bedstuy')
+def bedstuy():
+    return render_template('bedstuy.html')
+@app.route('/jacksonheights')
+def jacksonheights():
+    return render_template('jacksonheights.html')
+@app.route('/harlem')
+def harlem():
+    return render_template('harlem.html')
+@app.route('/williamsburg')
+def williamsburg():
+    return render_template('williamsburg.html')
+@app.route('/parkslope')
+def parkslope():
+    return render_template('parkslope.html')
+@app.route('/bayside')
+def bayside():
+    return render_template('bayside.html')
 
 app.run(debug=True)
+
+

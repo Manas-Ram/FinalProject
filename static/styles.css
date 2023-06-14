@@ -1,12 +1,23 @@
 body{
-  background-color: white;
+  background-color:turquoise;
 }
 
 svg{
   border-style: solid;
   border-width: 1px;
 }
-
+.first{
+  margin-bottom: 30px;
+}
+.second{
+  stroke: purple;
+  stroke-width: 10px;
+  fill: purple;
+}
+.space{
+  margin-bottom: 40px;
+  text-decoration-color: blue;
+}
 .us {
   stroke:red;
 }
